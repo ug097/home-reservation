@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// ログイン
+Route::get('/login', 'AuthController@login');
+// 新規登録
+Route::get('/signup', 'AuthController@signup');
+
+// 予定表
+Route::get('/', 'ReserveController@schedule');
